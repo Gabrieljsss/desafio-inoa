@@ -3,6 +3,8 @@
 
 Exectável: desafio-inoa-gabriel-console/bin/Release/net6.0/win-x64/desafio-inoa-gabriel-console.exe 
 
+Uso através do prompt de comando. Ex.: desafio-inoa-gabriel-console/bin/Release/net6.0/win-x64/desafio-inoa-gabriel-console.exe VALE3.SA 10 0
+
 ## Environment Variables
 
 O sistema deve ter as seguintes variáveis de ambiente configuradas.Exemplos de configurações possíveis encontram-se abaixo.
