@@ -1,4 +1,4 @@
-﻿public class FinanceDataService 
+﻿public class FinanceDataService
 {
     private static readonly HttpClient client = new HttpClient();
 
@@ -11,7 +11,7 @@
         if (response.IsSuccessStatusCode)
         {
             string responseBody = await response.Content.ReadAsStringAsync();
-            return Asset.FromHttpRequest(responseBody);
+            return Asset.FromHttpResponse(responseBody);
         }
         throw new Exception($"Error: {response.StatusCode}");
     }

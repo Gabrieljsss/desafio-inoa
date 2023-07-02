@@ -19,15 +19,15 @@
         while (true)
         {
             Asset assetData = await financeService.GetAssetData(asset);
-            if (assetData.GetPrice().LessOrEquals(lowerLimit))
+            if (assetData.Price.LessOrEquals(lowerLimit))
             {
-                mailService.SendEmail("buy", asset, assetData.GetPrice().GetValue());
+                mailService.SendEmail("buy", asset, assetData.Price.Value);
             }
-            if (assetData.GetPrice().GreaterOrEquals(upperLimit))
+            if (assetData.Price.GreaterOrEquals(upperLimit))
             {
-                mailService.SendEmail("sell", asset, assetData.GetPrice().GetValue());
+                mailService.SendEmail("sell", asset, assetData.Price.Value);
             }
-            Console.WriteLine($"Monitoring asset: {asset}. Current price: {assetData.GetPrice().GetValue()}.");
+            Console.WriteLine($"Monitoring asset: {asset}. Current price: {assetData.Price.Value}.");
             await Task.Delay(TimeSpan.FromMinutes(5));
         }
     }

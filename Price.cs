@@ -1,6 +1,6 @@
 public struct Price
 {
-    private decimal Value { get; }
+    public decimal Value { get; }
 
     public Price(string value)
     {
@@ -11,11 +11,6 @@ public struct Price
         }
 
         Value = parsedValue;
-    }
-
-    public decimal GetValue()
-    {
-        return Value;
     }
 
     public bool LessOrEquals(Price other)

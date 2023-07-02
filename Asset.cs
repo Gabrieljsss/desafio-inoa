@@ -6,7 +6,7 @@ public class Asset
     private decimal Open { get; set; }
     private decimal High { get; set; }
     private decimal Low { get; set; }
-    private Price Price { get; set; }
+    public Price Price { get; set; }
     private long Volume { get; set; }
     private string LatestTradingDay { get; set; }
     private decimal PreviousClose { get; set; }
@@ -20,17 +20,12 @@ public class Asset
         ChangePercent = string.Empty;
     }
 
-    public Price GetPrice()
-    {
-        return this.Price;
-    }
-
     public decimal PriceAsDecimal()
     {
-        return this.Price.GetValue();
+        return this.Price.Value;
     }
 
-    public static Asset FromHttpRequest(string data)
+    public static Asset FromHttpResponse(string data)
     {
         var doc = JsonDocument.Parse(data);
         var quote = doc.RootElement.GetProperty("Global Quote");

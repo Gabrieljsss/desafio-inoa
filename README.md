@@ -1,9 +1,9 @@
 
 # Aplicação para monitoramento de preço de ativos
 
-Exectável: desafio-inoa-gabriel-console/bin/Release/net6.0/win-x64/desafio-inoa-gabriel-console.exe 
+Exectável: desafio-inoa-gabriel-console/bin/Release/net6.0/win-x64/desafio-inoa-gabriel-console.exe
 
-Uso através do prompt de comando. Ex.: desafio-inoa-gabriel-console/bin/Release/net6.0/win-x64/desafio-inoa-gabriel-console.exe VALE3.SA 10 0
+Uso através do prompt de comando. Ex.: desafio-inoa-gabriel-console/bin/Release/net6.0/win-x64/desafio-inoa-gabriel-console.exe VALE3.SA <preço superior> <preço inferior>
 
 ## Environment Variables
 
