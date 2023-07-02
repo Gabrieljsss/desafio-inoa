@@ -10,6 +10,7 @@ public class MailService : IMailService
 {
     private readonly SmtpClient smtpClient;
     private readonly string senderEmail;
+    private readonly string targetEmail;
 
     public MailService()
     {
@@ -20,6 +21,8 @@ public class MailService : IMailService
                        : throw new ArgumentNullException("SMTP_PORT environment variable is not set or is not a valid integer");
         this.senderEmail = Environment.GetEnvironmentVariable("SENDER_EMAIL")
                            ?? throw new ArgumentNullException("SENDER_EMAIL environment variable is not set");
+        this.targetEmail = Environment.GetEnvironmentVariable("TARGET_EMAIL")
+                           ?? throw new ArgumentNullException("TARGET_EMAIL environment variable is not set");
         string senderPassword = Environment.GetEnvironmentVariable("SENDER_PASSWORD")
                                 ?? throw new ArgumentNullException("SENDER_PASSWORD environment variable is not set");
 
@@ -32,7 +35,7 @@ public class MailService : IMailService
 
     public void SendEmail(string recommendation, string asset, decimal price)
     {
-        this.smtpClient.Send(this.senderEmail, "gabrieljsssss@gmail.com",
+        this.smtpClient.Send(this.senderEmail, this.targetEmail,
             $"Stock Alert: {recommendation.ToUpper()} {asset}",
             $"The price for {asset} is now {price}. It is recommended to {recommendation}.");
     }
