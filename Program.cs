@@ -2,7 +2,8 @@
 {
     public static async Task Main(string[] args)
     {
-        DotNetEnv.Env.Load();
+        string envPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, ".env");
+        DotNetEnv.Env.Load(envPath);
         FinanceDataService financeService = new FinanceDataService();
         MailService mailService = new MailService();
 
