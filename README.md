@@ -19,5 +19,5 @@ O sistema deve ter as variáveis de ambiente abaixo configuradas. Elas podem tan
 
 `SENDER_PASSWORD=<credencial email de envio>`. Obs.: Para contas com two-factor authentication, recomenda-se o uso de app-specific-passwords.
 
-`API_KEY=aaaaaa`
+`API_KEY=aaaaaa` Obs.: API key pode ser obtida em https://www.alphavantage.co/support/#api-key 
 
