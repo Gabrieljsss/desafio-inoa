@@ -1,5 +1,5 @@
 
-# Aplicação para monitoramento de preço de ativos
+# Aplicação para monitoramento do preço de ativos
 
 Exectável: desafio-inoa-gabriel-console/bin/Release/net6.0/win-x64/desafio-inoa-gabriel-console.exe
 
