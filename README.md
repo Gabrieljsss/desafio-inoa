@@ -7,7 +7,7 @@ Uso através do prompt de comando. Ex.: desafio-inoa-gabriel-console/bin/Release
 
 ## Environment Variables
 
-O sistema deve as variáveis de ambiente abaixo configuradas. Elas podem tanto ser configuradas diretamente nas configurações de variáveis de ambiente do Windows, quanto serem definidas em um arquivo .env, nesse caso tal arquivo deverá ser movido pelo usuário para o diretório desafio-inoa-gabriel-console/bin/Release/net6.0/win-x64.
+O sistema deve ter as variáveis de ambiente abaixo configuradas. Elas podem tanto ser configuradas diretamente nas configurações de variáveis de ambiente do Windows, quanto serem definidas em um arquivo .env. Nesse segundo caso tal arquivo .env deverá ser movido pelo usuário para o diretório desafio-inoa-gabriel-console/bin/Release/net6.0/win-x64.
 
 `SMTP_SERVER=<smtp server>`. Ex.: `SMTP_SERVER=smtp.gmail.com`
 
