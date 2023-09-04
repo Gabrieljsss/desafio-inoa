@@ -1,25 +1,48 @@
-public struct Price
+namespace PriceMonitor
 {
-    public decimal Value { get; }
-
-    public Price(string value)
+    public struct Price
     {
-        string normalizedValue = value.Replace(",", ".").Replace(".", string.Empty);
-        if (!decimal.TryParse(normalizedValue, out var parsedValue) || parsedValue < 0)
+        public decimal Value { get; }
+
+        public Price(string value)
         {
-            throw new ArgumentOutOfRangeException(nameof(value), "Invalid price value");
+            string normalizedValue = value.Replace(",", ".").Replace(".", string.Empty);
+            if (!decimal.TryParse(normalizedValue, out var parsedValue) || parsedValue < 0)
+            {
+                throw new ArgumentOutOfRangeException(nameof(value), "Invalid price value");
+            }
+
+            Value = parsedValue;
         }
 
-        Value = parsedValue;
-    }
+        public Price(int value)
+        {
+            if (value < 0)
+            {
+                throw new ArgumentOutOfRangeException(nameof(value), "Value cannot be negative");
+            }
 
-    public bool LessOrEquals(Price other)
-    {
-        return Value <= other.Value;
-    }
+            Value = value;
+        }
 
-    public bool GreaterOrEquals(Price other)
-    {
-        return Value >= other.Value;
+        public Price(decimal value)
+        {
+            if (value < 0)
+            {
+                throw new ArgumentOutOfRangeException(nameof(value), "Value cannot be negative");
+            }
+
+            Value = value;
+        }
+
+        public bool LessOrEquals(Price other)
+        {
+            return Value <= other.Value;
+        }
+
+        public bool GreaterOrEquals(Price other)
+        {
+            return Value >= other.Value;
+        }
     }
 }

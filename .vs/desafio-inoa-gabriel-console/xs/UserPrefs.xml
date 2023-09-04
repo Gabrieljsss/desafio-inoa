@@ -1,0 +1,28 @@
+﻿<Properties StartupConfiguration="{8985313E-7198-4696-A3D1-9076BCBE1E39}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Price.cs">
+    <Files>
+      <File FileName="Program.cs" Line="13" Column="20" />
+      <File FileName="MailService.cs" />
+      <File FileName="Asset.cs" Line="48" Column="1" />
+      <File FileName="Price.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="desafio-inoa-gabriel-console">
+            <Node name="desafio-inoa-gabriel-console">
+              <Node name="Price.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.PriceMonitor PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints />
+  <MonoDevelop.Ide.ItemProperties.PriceMonitorTest FirstBuild="True" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <Debugger.DebugSourceFolders />
+  <MultiItemStartupConfigurations />
+</Properties>
